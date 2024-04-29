@@ -1,11 +1,9 @@
 package br.sp.jessie.tasks.apitest;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.apache.http.entity.ContentType;
-
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 
 public class APITest {
     
@@ -21,8 +19,7 @@ public class APITest {
         .when()
             .get("/todo")
         .then()
-            .statusCode(200)
-        ;
+            .statusCode(200);
     }
 
     @Test
@@ -34,8 +31,7 @@ public class APITest {
             .post("/todo")
         .then()
             .log().all()
-            .statusCode(201)
-        ;
+            .statusCode(201);
     }
 
     @Test
@@ -48,7 +44,6 @@ public class APITest {
         .then()
             .log().all()
             .statusCode(400)
-            .body("message", CoreMatchers.is("Due date must not be in past"))
-        ;
+            .body("message", CoreMatchers.is("Due date must not be in past"));
     }
 }
