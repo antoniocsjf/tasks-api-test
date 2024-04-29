@@ -4,6 +4,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import org.hamcrest.CoreMatchers;
 
 public class APITest {
     
