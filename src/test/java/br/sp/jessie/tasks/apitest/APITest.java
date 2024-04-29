@@ -3,6 +3,7 @@ package br.sp.jessie.tasks.apitest;
 import org.hamcrest.CoreMatchers;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.apache.http.entity.ContentType;
 
 import io.restassured.RestAssured;
 
